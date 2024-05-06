@@ -7,9 +7,9 @@ import java.util.List;
 public interface DogService {
     List<Dog> retrieveDogs();
 
-    List<String> retrieveDogBreed();
+    List<String> retrieveDogsBreed();
 
-    String getBreedByDogId(long id);
+    String getDogBreedByDogId(long id);
 
-    List<String> retrieveDogNames();
+    List<String> retrieveDogsName();
 }

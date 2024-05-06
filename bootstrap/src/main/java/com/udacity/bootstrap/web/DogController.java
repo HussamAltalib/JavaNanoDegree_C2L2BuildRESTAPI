@@ -27,20 +27,20 @@ public class DogController {
 
     @GetMapping("/dogBreed")
     public ResponseEntity<List<String>> getAllDogBreed(){
-        List<String> list = dogService.retrieveDogBreed();
+        List<String> list = dogService.retrieveDogsBreed();
         return new ResponseEntity<List<String>>(list, HttpStatus.OK);
     }
 
     @GetMapping("/dogBreedById/{id}")
-    public ResponseEntity<String> getDogBreedById(@PathVariable("id") long id){
-        System.out.println(dogService.getBreedByDogId(id));
-        String str = ((String)dogService.getBreedByDogId(id));
+    public ResponseEntity<String> getDogBreedById(@PathVariable long id){
+        System.out.println(dogService.getDogBreedByDogId(id));
+        String str = dogService.getDogBreedByDogId(id);
         return new ResponseEntity<String>(str, HttpStatus.OK);
     }
 
     @GetMapping("/dogNames")
     public ResponseEntity<List<String>> getAllDogNames(){
-        List<String> list = dogService.retrieveDogNames();
+        List<String> list = dogService.retrieveDogsName();
         return new ResponseEntity<List<String>>(list, HttpStatus.OK);
     }
 }
