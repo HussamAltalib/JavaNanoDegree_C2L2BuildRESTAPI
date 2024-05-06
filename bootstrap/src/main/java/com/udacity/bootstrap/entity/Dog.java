@@ -1,9 +1,6 @@
 package com.udacity.bootstrap.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Dog {
@@ -21,10 +18,6 @@ public class Dog {
         this.origin = origin;
     }
 
-    public Dog(String name, String breed) {
-        this.name = name;
-        this.breed = breed;
-    }
 
     public Dog() {}
 
