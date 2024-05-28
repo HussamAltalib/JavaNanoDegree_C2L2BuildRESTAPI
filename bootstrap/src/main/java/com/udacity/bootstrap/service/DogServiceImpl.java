@@ -27,11 +27,13 @@ public class DogServiceImpl implements DogService {
 //        String breed = optionalBreed.orElseThrow(DogNotFoundException::new);
 //        return breed;
 
+        String breed = dogRepository.getDogBreedById(id);
 
-                if(dogRepository.getDogBreedById(id) == null){
+
+        if(breed == null){
             throw new DogNotFoundException("the id is not correct");
         } else {
-            return dogRepository.getDogBreedById(id);
+            return breed;
         }
     }
 

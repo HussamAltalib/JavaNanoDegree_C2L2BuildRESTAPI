@@ -40,7 +40,6 @@ public class DogController {
 
     @GetMapping("/dogBreedById/{id}")
     public ResponseEntity<String> getDogBreedById(@PathVariable long id){
-        System.out.println(dogService.getDogBreedByDogId(id));
         String str = dogService.getDogBreedByDogId(id);
         return new ResponseEntity<String>(str, HttpStatus.OK);
     }
